@@ -1,0 +1,86 @@
+@import '../../styles/mq.mixin.scss';
+@import '../../styles/breakpoint.scss';
+
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+    margin: 10px 60px 0 10px;
+
+    .card{
+        padding: 20px;
+        width: 96% !important;
+         display: flex;
+        justify-content: start;
+        flex-flow: row;
+        .cart-image{
+            width: 200px !important;
+            @include mq($max-width){
+                width: 114px !important;
+                height : 137px;
+            
+        }
+        }
+    }   
+    
+}
+.card-details{
+    display: flex;
+    justify-content: space-between;
+    max-width: 78rem;
+    .cart-item{
+        @include mq($max-width){
+            width: 100%;
+            
+        }
+    }
+        @include mq($max-width){
+            width: 100%;
+            flex-direction: column;
+        
+    }
+    .card{
+        width: 100% !important;
+        
+    }
+    
+    .cart-image {
+        height: 187px;
+        
+    }
+    .name-price-details{
+        @include mq($max-width){
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+    .card-textcontainer{
+        width: 100%;
+    display: flex;
+    padding: 36px 10px 0 45px;
+    }
+    .item-number{
+        width: 40%;
+    }
+
+    .remove-item{
+        background-color: transparent;
+        border: none;
+        @include mq($max-width){
+            width: 100%;
+        }
+    }
+
+    .item-count-remove-item{
+        display: flex;
+    }
+
+    .cart-details-container{
+        @include mq($max-width){
+            text-align: center;
+           // margin-left: 30px;
+        } 
+    }
+}
