@@ -29,6 +29,16 @@
     display: flex;
     justify-content: space-between;
     max-width: 78rem;
+    .checkout-shop-now{
+        padding: 10px 18px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        text-align: center;
+        background: #4368ea;
+        color: #fff;
+        border-radius: 12px;
+    }
     .cart-item{
         @include mq($max-width){
             width: 100%;
@@ -80,7 +90,6 @@
     .cart-details-container{
         @include mq($max-width){
             text-align: center;
-           // margin-left: 30px;
         } 
     }
 }
