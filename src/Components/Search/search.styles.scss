@@ -1,5 +1,23 @@
 
 
+
+.search-icon{
+    .search-box{
+        border: 0px none !important;
+        background: transparent !important;
+        border-bottom: 0px solid white !important;
+        border-radius: 0 !important;
+        width: 0;
+        transition: width .5s ease-in-out border-bottom .5s ease-in-out;
+    }
+    
+    &:hover .search-box{
+        width :200px;
+        border-bottom: 1px solid white !important;
+    }
+    
+}
+
 .serach-button{
     position: absolute;
     top: 1px;
@@ -7,4 +25,7 @@
     padding: 6.0px;
     background-color: white;
     border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
 }

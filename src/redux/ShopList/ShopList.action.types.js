@@ -5,3 +5,4 @@ export const SORT_ITEM = 'SORT_ITEM';
 export const REMOVE_ITEM = 'REMOVE_ITEM';
 export const SET_SPINNER_FLAG = 'SET_SPINNER_FLAG';
 export const SEARCH_STRING = 'SEARCH_STRING';
+export const SEARCH_STRING_CART_ITEM = 'SEARCH_STRING_CART_ITEM';

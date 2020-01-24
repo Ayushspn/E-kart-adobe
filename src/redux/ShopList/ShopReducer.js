@@ -9,6 +9,7 @@ import {
 const INITIALSTATE = {
     ShopItemList: [],
     copyShopItemList: [],
+    copyCartListItem : [],
     cartItems: [],
     cartItemCount: 0,
     totalPrice: 0,
@@ -42,6 +43,7 @@ const shopReducer = (state = INITIALSTATE, action) => {
             return {
                 ...state,
                 cartItems: addItemToCart,
+                copyCartListItem : addItemToCart,
                 cartItemCount: countItems.quantity,
                 cartItemTotalPrice: countItems.totalPrice,
                 cartItemTotalDiscount: countItems.totalDiscount
@@ -56,6 +58,7 @@ const shopReducer = (state = INITIALSTATE, action) => {
             return {
                 ...state,
                 cartItems: removedItems,
+                copyCartListItem : removedItems,
                 cartItemCount: countRemoveItems.quantity,
                 cartItemTotalPrice: countRemoveItems.totalPrice,
                 cartItemTotalDiscount: countRemoveItems.totalDiscount
@@ -73,7 +76,7 @@ const shopReducer = (state = INITIALSTATE, action) => {
             else {
                 const resetSortBy = [...state.copyShopItemList]
                 return {
-                    ...state, 
+                    ...state,
                     ShopItemList: resetSortBy
 
                 }
@@ -93,6 +96,15 @@ const shopReducer = (state = INITIALSTATE, action) => {
                 ShopItemList: searchedShopList
             }
 
+
+        case actionTypes.SEARCH_STRING_CART_ITEM:
+            const cartListList = state.copyCartListItem;
+            const searchedCartListList = searchByTitle(cartListList, action);
+            console.log(searchedCartListList)
+            return {
+                ...state,
+                cartItems: searchedCartListList
+            }
 
         default:
             return state

@@ -17,10 +17,13 @@ const Header = ({ cartCount, history }) => {
                 <Link to="/" className="logo mobile-logo">CL</Link>
             </div>
             <div className="search-cart-container">
-                    <Search />
+                <Search />
+                {history.location.pathname === '/' ?
                     <div className='cart-icon'>
                         <button className='cart-button pull-right' onClick={() => redirectTocartPage()}><i className="fa fa-shopping-cart" aria-hidden="true"><span className='cartItem'>{cartCount || 0}</span></i></button>
                     </div>
+                    : null}
+
             </div>
         </div>
     )

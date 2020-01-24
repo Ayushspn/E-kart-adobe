@@ -49,3 +49,8 @@ export const searchTitle = (searchString) => ({
   type: actionTypes.SEARCH_STRING,
   payload : searchString
 })
+
+export const searchTitleInCartItem = (searchString) => ({
+  type: actionTypes.SEARCH_STRING_CART_ITEM,
+  payload : searchString
+})
