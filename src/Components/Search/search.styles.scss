@@ -1,6 +1,8 @@
 
 
-
+input:focus{
+    box-shadow: none !important;
+}
 .search-icon{
     .search-box{
         border: 0px none !important;
@@ -9,7 +11,11 @@
         border-radius: 0 !important;
         width: 0;
         transition: width .5s ease-in-out border-bottom .5s ease-in-out;
+       &::-webkit-search-cancel-button{
+           display: none !important;
+       }
     }
+    
     
     &:hover .search-box{
         width :200px;
